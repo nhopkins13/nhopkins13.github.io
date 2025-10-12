@@ -1,9 +1,9 @@
 function getPaintingsForYear(year) {
   switch (year) {
-    case '2025':
-      return ['owl-2025.jpeg', 'owl2-2025.JPG', 'bowie-2025.jpeg'];
+    case '2024-2025':
+      return ['owl-2025.jpeg', 'owl2-2025.JPG', 'bowie-2025.jpeg', 'rockylizard.jpeg'];
     case '2023':
-      return ['owl-2023.jpeg'];
+      return ['owl-2023.jpeg', 'abstract.jpeg'];
     case '2022':
       return ['cloth-2022.jpeg', 'incar-2022.jpeg', 'me-2022.jpeg', 'reflections-2022.jpeg'];
     case '2021':
@@ -17,6 +17,8 @@ function getPaintingsForYear(year) {
       ];
     case '2018':
       return ['me-2018.JPG', 'sunset-2018.jpeg', 'cara-2018.jpeg'];
+    case '2012':
+        return ['werewolf.jpeg'];
     default:
       return [];
   }
@@ -24,7 +26,7 @@ function getPaintingsForYear(year) {
 
 function buildGallery() {
   const galleryContainer = document.getElementById('gallery-container');
-  const years = ['2025', '2023', '2022', '2021', '2020', '2019', '2018'];
+  const years = ['2024-2025', '2023', '2022', '2021', '2020', '2019', '2018', '2012'];
   let allLinks = [];
 
   years.forEach(year => {
@@ -68,7 +70,6 @@ function buildGallery() {
 function initLightbox(allLinks) {
   const modal = document.getElementById('lightbox-modal');
   const modalImg = document.getElementById('lightbox-image');
-  const caption = document.getElementById('lightbox-caption');
   const closeBtn = document.getElementById('lightbox-close');
   const prevBtn = document.getElementById('lightbox-prev');
   const nextBtn = document.getElementById('lightbox-next');
@@ -79,21 +80,24 @@ function openLightbox(index) {
     const link = allLinks[index];
     if (!link) return;
     currentIndex = index;
-    modalImg.classList.remove('upscaled');
     modalImg.src = link.href;
     modal.classList.add('show');
 
     modalImg.onload = () => {
         const vw = window.innerWidth;
-        const vh = window.innerHeight;
-        const isSmall =
-        modalImg.naturalWidth < vw * 0.5 && modalImg.naturalHeight < vh * 0.5;
+  const vh = window.innerHeight;
 
-        if (isSmall) {
-        modalImg.classList.add('upscaled');
-        } else {
-        modalImg.classList.remove('upscaled');
-        }
+  modalImg.style.width = '';
+  modalImg.style.height = '';
+
+  const imgW = modalImg.naturalWidth;
+  const imgH = modalImg.naturalHeight;
+
+  if (imgW < vw * 0.5 && imgH < vh * 0.5) {
+    const scaleFactor = Math.min((vw * 0.8) / imgW, (vh * 0.8) / imgH);
+    modalImg.style.width = `${imgW * scaleFactor}px`;
+    modalImg.style.height = 'auto';
+  }
     };
 }
 

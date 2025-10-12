@@ -129,7 +129,7 @@ a:visited {
   height: 1vh;
 }
 #scroll-name {
-  background-color: var(--name-color-on);
+  background-color: greenyellow;
 }
 #scroll-education {
   background-color: var(--education-color-on);
