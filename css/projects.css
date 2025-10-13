@@ -1,0 +1,26 @@
+.scratch {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: nowrap;
+}
+
+.scratch .intro {
+  flex: 0 0 40%;
+  padding: 3rem;
+  background-color: #f9fafb;
+  border-left: 12px solid #4f46e5;
+  font-family: "Georgia", serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  color: #333;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.scratch iframe {
+  flex: 0 0 60%;
+}

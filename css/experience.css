@@ -10,9 +10,8 @@ body {
 }
 
 .wrapper {
-  max-width: 900px;
-  margin: 200px 50px 50px 50px;
-  padding: 20px;
+  margin: 10vh 5rem 5rem 5rem;
+  padding: 2rem;
 }
 
 h1 {
