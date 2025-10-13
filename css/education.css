@@ -1,8 +1,6 @@
 body {
   font-family: 'Times New Roman', Times, serif;
   background-color: #f8f9fc;
-  margin: 0;
-  padding: 0;
   color: #333;
   font-size: 1.8rem;
   text-align: left;
@@ -11,8 +9,6 @@ body {
 }
 
 .wrapper {
-  margin: 10vh 5rem 5rem 5rem;
-  padding: 2rem;
   flex: 1;
 }
 

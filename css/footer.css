@@ -1,0 +1,65 @@
+footer {
+  background-color: rgba(167, 211, 212, 0.945);
+  color: darkred;
+  font-family: "Courier New", Courier, monospace;
+  padding: 10vh 10%;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid rgba(139, 0, 0, 0.2);
+  padding: 20px 80px 40px;
+  gap: 100px;
+  width: 100%;
+}
+
+.footer-profile img {
+  width: 25vh;
+  height: 25vh;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.footer-contact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(80rem, 1fr));
+  gap: 3rem 8rem;
+  font-size: 3.5rem;
+  flex: 1;
+  padding: 2 20px;
+  width: 100%;
+}
+
+.footer-contact h3 {
+  grid-column: 1 / -1;
+  font-size: 6rem;
+  margin-bottom: 4rem;
+  color: darkred;
+}
+
+.contact-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+footer a {
+  color: darkred;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: rgb(120, 0, 0);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: darkred;
+}
