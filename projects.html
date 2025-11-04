@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>aboutneely-projects</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -15,24 +16,53 @@
 
   <div class="wrapper">
     <div class="title-container">
-      <h1 class="page-title">CODING PROJECTS</h1>
+      <h1>CODING PROJECTS</h1>
+      <div class="typewriter-container">
+        <p id="typewriter-text"></p>
+      </div>
     </div>
-    <div class="scratch">
-      <blockquote class="intro"> Art has always been an essential part of my life—a skill and passion I’ve nurtured for as long as I can remember. When I create, I enter a mindset that’s both peaceful and inspiring—it’s when I feel most like myself. Whether it’s spontaneous doodles in a notebook or detailed paintings that take hours to complete, art has always been my constant source of expression and grounding.</blockquote>
-      <iframe
-          src="https://scratch.mit.edu/projects/426741011/embed"
-          allowtransparency="true"
-          frameborder="0"
-          scrolling="no"
-          allowfullscreen
-          width="1000"
-          height="1000">
-      </iframe>   
+    <div class="project">
+      <h2>Halloween Maze</h2>
+      <p class="date">09/2020</p>
+      <div class="overflow-row">
+        <blockquote class="intro">Fun fact: this is the first "coding project" I ever created! It was created on Scratch, so although its development did not involve any coding languages, I learned a lot about basic coding structures and principles. I dedicated a lot of time to testing the gameplay and coming up with creative ways to ensure users had a smooth gaming experience with no obvious errors. This project was particularly special because we were given complete creative freedom, with no parameters to abide by. Click any of the images to give the game a try for yourself!</blockquote>
+        <a href="https://scratch.mit.edu/projects/426741011/" target="_blank"><img src="images/projects/scratch-start.png" alt="Halloween Maze Screenshot"></a>
+        <a href="https://scratch.mit.edu/projects/426741011/" target="_blank"><img src="images/projects/scratch-game.png" alt="Halloween Maze Screenshot"></a>
+        <a href="https://scratch.mit.edu/projects/426741011/" target="_blank"><img src="images/projects/scratch-end.png" alt="Halloween Maze Screenshot"></a>
+      </div> 
+    </div>
+    <div class="project">
+      <h2>OpenGL Coin-Collecting/Enemy-Avoiding Game</h2>
+      <p class="date">12/2021</p>
+      <div class="overflow-row">
+        <blockquote class="intro"> For my CSCI441 (Computer Graphics) final project, I developed a 3D coin-collecting and enemy-avoiding game using OpenGL. The game features a player-controlled character that navigates through a 3D environment to collect coins while avoiding moving enemies. I implemented various graphical techniques, including texture mapping, lighting, and camera controls, to enhance the visual experience. This project allowed me to apply my knowledge of computer graphics and improve my programming skills in C++.</blockquote>
+        <img src="images/projects/opengl.png" alt="OpenGL Game Screenshot">
+        <img src="images/projects/opengl-1.png" alt="OpenGL Game Screenshot">
+    </div>
+    </div>
+    <div class="project">
+      <h2>Studysaurus App</h2>
+      <p class="date">05/2025</p>
+      <div class="overflow-row">
+        <blockquote class="intro"> During CSCI448 (Mobile Application Development), I collaborated with a team to develop the Studysaurus app. StudySaurus is a motivational productivity application designed to encourage users through task completion. Users interact with a customizable dinosaur companion whose well-being and appearance are tied to the user's real-world productivity. Key features include task creation and management, an in-app shop for cosmetic accessories, and dinosaur customization.</blockquote>
+        <img src="images/projects/study-login.png" alt="Studysaurus App Screenshot">
+        <img src="images/projects/study-start.png" alt="Studysaurus App Screenshot">
+        <img src="images/projects/study-task.png" alt="Studysaurus App Screenshot">
+        <img src="images/projects/study-shop.png" alt="Studysaurus App Screenshot">
+        <img src="images/projects/study-wardrobe.png" alt="Studysaurus App Screenshot">
+        <img src="images/projects/study-end.png" alt="Studysaurus App Screenshot">
+      </div>
     </div>
   </div>
+ 
 
   <div id="footer"></div>
   <script src="js/navbar.js"></script>
   <script src="js/footer.js"></script>
+  <script src="js/typewriter.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+    startTypewriter("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");});
+</script>
 </body>
 </html>

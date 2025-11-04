@@ -1,7 +1,7 @@
 footer {
-  background-color: rgba(167, 211, 212, 0.945);
-  color: darkred;
-  font-family: "Courier New", Courier, monospace;
+  background-image: url("../assets/postcard.png");
+  color: black;
+  font-family: 'Georgia', serif;
   padding: 10vh 10%;
   width: 100%;
 }
@@ -21,6 +21,7 @@ footer {
   height: 25vh;
   border-radius: 50%;
   object-fit: cover;
+  border: 10px solid white;
 }
 
 .footer-contact {
@@ -29,15 +30,16 @@ footer {
   gap: 3rem 8rem;
   font-size: 3.5rem;
   flex: 1;
-  padding: 2 20px;
+  padding: 10px;
   width: 100%;
+  background-color: white;
 }
 
 .footer-contact h3 {
   grid-column: 1 / -1;
   font-size: 6rem;
   margin-bottom: 4rem;
-  color: darkred;
+  color: black;
 }
 
 .contact-item {
@@ -47,7 +49,7 @@ footer {
 }
 
 footer a {
-  color: darkred;
+  color: black;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
@@ -61,5 +63,6 @@ footer a:hover {
   text-align: center;
   font-size: 2rem;
   margin-top: 2rem;
-  color: darkred;
+  color: black;
+  background-color: white;
 }

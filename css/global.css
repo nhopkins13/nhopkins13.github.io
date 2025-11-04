@@ -1,4 +1,85 @@
+/*aesthetic stuff*/
 .wrapper {
   margin: 10vh 2rem 2rem 2rem;
   padding: 2rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f8f9fc;
+  color: #333;
+  font-size: 1.8rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+h1{
+  text-align: left;
+  font-size: 8rem;
+  margin-bottom: 3rem;
+  padding-bottom: 10px;
+  margin-right: 5px;
+}
+
+h2{
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  font-size: 3rem;
+}
+
+.intro{
+  font-family: "Georgia", serif;
+  font-size: 3rem;
+  font-style: italic;
+  color: #333;
+  border-left: 12px solid #4f46e5; 
+  padding: 5rem;
+  background-color: #f9fafb;
+  width: auto;
+}
+
+.date {
+  font-size: 3rem;
+}
+
+.overflow-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;    
+  overflow: visible; 
+  align-items: flex-start;
+}
+
+.overflow-row > * {
+  flex: 0 1 auto; 
+  min-width: 300px;  
+}
+
+/*typewriter stuff*/
+.typewriter-container {
+  cursor: pointer;
+}
+.cursor {
+  display: inline-block;
+  margin-left: .1rem;
+  font-weight: bolder;
+  color: red;
+  animation: blink 0.8s infinite;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }

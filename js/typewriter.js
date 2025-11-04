@@ -1,10 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const textElement = document.getElementById("typewriter-text");
-  const container = document.querySelector(".typewriter-container");
-  const message = "Hello world!\nWelcome to my website. Click around to learn more about me!";
-  const typingDelay = 70; 
+function startTypewriter(message, textElementId = "typewriter-text", containerSelector = ".typewriter-container") {
+  const textElement = document.getElementById(textElementId);
+  const container = document.querySelector(containerSelector);
+  const typingDelay = 70;
   let index = 0;
   let typingTimeout;
+
+  if (!textElement || !container) {
+    console.error("Typewriter: missing text element or container.");
+    return;
+  }
 
   function typeCharacter() {
     if (index <= message.length) {
@@ -22,6 +26,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   setTimeout(startTyping, 500);
-
   container.addEventListener("click", startTyping);
-});
+}

@@ -1,26 +1,11 @@
-body {
-  font-family: 'Times New Roman', Times, serif;
-  background-color: #f8f9fc;
-  color: #333;
-  font-size: 1.8rem;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-}
-
 .wrapper {
   flex: 1;
 }
 
 h1 {
-  text-align: left;
-  font-size: 8rem;
-  margin-bottom: 3rem;
   border-bottom: 2px solid #1a5276;
   font-family: 'Times New Roman', Times, serif;
   color: #2c3e50;
-  padding-bottom: 10px;
-  margin-right: 5px;
 }
 
 #map {
@@ -77,11 +62,9 @@ h1 {
 }
 
 
-.edu-header h2 {
+h2 {
   margin: 0;
-  font-size: 5rem;
   color: #1a5276;
-  text-align: left;
 }
 
 .edu-header span {
@@ -89,12 +72,6 @@ h1 {
   color: #555;
   display: block;
   margin-top: 5px;
-}
-
-.edu-details p {
-  margin: 0.5rem 0;
-  line-height: 1.6;
-  font-size: 3rem;
 }
 
 .activities {

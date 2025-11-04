@@ -37,7 +37,7 @@ function buildGallery() {
     section.classList.add('year-section');
 
     const title = document.createElement('h2');
-    title.classList.add('year-title');
+    title.classList.add('date');
     title.textContent = year;
     section.appendChild(title);
 
