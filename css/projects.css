@@ -19,3 +19,22 @@ h1{
   border-bottom: 2px solid #ddd;
   padding-bottom: 2rem;
 }
+
+.overflow-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;    
+  overflow: visible; 
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.overflow-row > * {
+  flex: 0 1 auto;
+}
+
+img{
+  height: 40vh;
+}

@@ -1,3 +1,7 @@
+/*tiny details*/
+.indent{
+  text-indent: 2rem;
+}
 /*aesthetic stuff*/
 .wrapper {
   margin: 10vh 2rem 2rem 2rem;
@@ -18,14 +22,13 @@ body {
   text-align: left;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 h1{
-  text-align: left;
   font-size: 8rem;
-  margin-bottom: 3rem;
-  padding-bottom: 10px;
-  margin-right: 5px;
+  padding: 1rem;
 }
 
 h2{
@@ -34,10 +37,29 @@ h2{
   color: #1f2937;
 }
 
+h3{
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
 p {
   margin: 0.5rem 0;
   line-height: 1.6;
   font-size: 3rem;
+  padding: 0.5rem;
+}
+
+.italics{
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+span {
+  display: flex;
+  white-space: pre;
 }
 
 .intro{
@@ -46,7 +68,7 @@ p {
   font-style: italic;
   color: #333;
   border-left: 12px solid #4f46e5; 
-  padding: 5rem;
+  padding: 3rem;
   background-color: #f9fafb;
   width: auto;
 }
@@ -55,19 +77,11 @@ p {
   font-size: 3rem;
 }
 
-.overflow-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;    
-  overflow: visible; 
-  align-items: flex-start;
+img {
+  max-height: 40vh;
+  width: auto;
+  padding: 0.5rem;
 }
-
-.overflow-row > * {
-  flex: 0 1 auto; 
-  min-width: 300px;  
-}
-
 /*typewriter stuff*/
 .typewriter-container {
   cursor: pointer;
