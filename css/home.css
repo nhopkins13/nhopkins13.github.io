@@ -93,11 +93,21 @@
 }
 
 .title {
-  display: table-cell;
-  vertical-align: middle;
+  display: block;
   font-family: 'Times New Roman', Times, serif;
   font-size: 14rem;
   font-weight: bolder;
+  text-align: center;
+}
+
+/* Ensure the anchor inside each .bg section fills the area and centers its children */
+.bg > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   text-align: center;
 }
 
@@ -109,23 +119,23 @@ a:visited {
   color: inherit;
 }
 
-#education{
+#education-title{
   color: var(--education-color-off);
 }
-#experience{
+#experience-title{
   color: var(--experience-color-off);
 }
-#paintings{
+#paintings-title{
   color: var(--paintings-color-off);
 }
-#projects{
+#projects-title{
   color: var(--projects-color-off);
 }
 
-#education:hover { color: var(--education-color-on); }
-#experience:hover { color: var(--experience-color-on); }
-#paintings:hover { color: var(--paintings-color-on); }
-#projects:hover { color: var(--projects-color-on); }
+#education-title:hover { color: var(--education-color-on); }
+#experience-title:hover { color: var(--experience-color-on); }
+#paintings-title:hover { color: var(--paintings-color-on); }
+#projects-title:hover { color: var(--projects-color-on); }
 
 .scroll{
   height: 10px;
@@ -154,8 +164,9 @@ a:visited {
   flex-direction: column;
   box-sizing: border-box;
   padding-inline: clamp(1rem, 6vw, 6rem);
-  min-height: 5rem;
-  margin-top: 3rem;
+  position: relative;
+  min-height: 10rem;
+  margin-top: 4rem;
   z-index: 1;
 }
 
@@ -165,14 +176,62 @@ a:visited {
   max-width: min(80%, 70ch);
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 1rem 2rem;
+  padding: 2rem;
   border-radius: 0.75rem;
-  background: rgb(250,232,193);
-  color: black;
-  font-family: 'Courier New', monospace;
-  font-size: 4rem;
-  line-height: 1.15;
+  background: #fffdf6; 
+  border: 2px solid #000;
+  color: #000;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(3rem, 3.2vw, 2.2rem);
+  line-height: 1.5;
   white-space: pre-wrap;
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
+  text-align: left;
+}
+
+.description-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-inline: clamp(1rem, 6vw, 6rem);
+  position: relative;
+  min-height: 10rem;
+  margin-top: 4rem;
+  z-index: 1;
+}
+
+.description-container p{
+  display: block;
+  width: 100%;
+  max-width: min(80%, 70ch);
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  border: 2px solid #000;
+  color: #000;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(3rem, 3.2vw, 2.2rem);
+  text-align: center;
+}
+
+#education-description p{
+  background-color: var(--education-color-off);
+}
+#experience-description p{
+  background-color: var(--experience-color-off);
+}
+#paintings-description p{
+  background-color: var(--paintings-color-off);
+}
+#projects-description p{
+  background-color: var(--projects-color-off);
+}
+
+.typewriter-container .cursor {
+  display: inline-block;
 }
