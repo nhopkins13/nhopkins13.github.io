@@ -1,16 +1,66 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.8;
-  background-color: #fff;
-  color: #000;
-  font-size: 1.6rem;
-  text-align: left;
+h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .job {
-  margin-bottom: 30px;
+  margin: 50px;
+  background-color: #fbfaf8; /* slightly off-white */
+  border-radius: 12px;
+  padding: 1.6rem;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.job-top {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.job-logo {
+  flex: 0 0 auto;
+}
+
+.job-logo img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  display: block;
+}
+
+.job-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.job-details {
+  margin-top: 8px;
 }
 
 .task {
-  margin-left: 20px;
+  margin-left: 0;
+  margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+  .job-logo img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 700px) {
+  .job-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .job-logo img {
+    width: 120px;
+  }
+  .job {
+    padding: 1rem;
+    margin: 28px 0;
+  }
 }

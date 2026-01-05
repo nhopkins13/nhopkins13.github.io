@@ -1,23 +1,17 @@
 h1{
-    font-family: 'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.typewriter-container{  
-  background-color: rgb(247, 216, 186);
-}
-.typewriter-container p{
-  max-width: 100%;
-  margin-bottom: 4rem;
-  font-size: 3rem;
-  white-space: nowrap;
-  overflow: hidden;
-}
 .project {
   margin: 4rem auto;
   max-width: 100%;
-  padding: 0 2rem;
-  border-bottom: 2px solid #ddd;
+  padding: 2rem;
   padding-bottom: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .overflow-row {
