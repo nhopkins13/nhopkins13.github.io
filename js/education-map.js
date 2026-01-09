@@ -53,14 +53,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  const eduCards = document.querySelectorAll('.edu-card');
-  eduCards.forEach((card, index) => {
-    card.addEventListener('click', () => {
-      markers.forEach(m => m.setIcon(defaultIcon));
+  // Instead of making `.edu-card` clickable, create a centered row
+  // of logos below the map and wire those to zoom to the matching marker.
+  const logoRow = document.getElementById('logo-row');
+  if (logoRow) {
+    const eduLogos = Array.from(document.querySelectorAll('.edu-logo'));
+    eduLogos.forEach((sourceImg, index) => {
+      const thumb = document.createElement('img');
+      thumb.className = 'map-logo';
+      thumb.src = sourceImg.src;
+      thumb.alt = sourceImg.alt || (universities[index] && universities[index].name) || `logo-${index}`;
 
-      const marker = markers[index];
-      map.setView(marker.getLatLng(), 14, { animate: true }); // Zoom level 14
+      thumb.addEventListener('click', () => {
+        document.querySelectorAll('.map-logo').forEach(i => i.classList.remove('selected'));
+        thumb.classList.add('selected');
+        const marker = markers[index];
+        if (marker) {
+          map.setView(marker.getLatLng(), 14, { animate: true });
+        }
+      });
+
+      logoRow.appendChild(thumb);
     });
-  });
+  }
 
 });

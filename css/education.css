@@ -1,6 +1,4 @@
-.wrapper {
-  flex: 1;
-}
+
 
 h1 {
   border-bottom: 2px solid #1a5276;
@@ -48,7 +46,6 @@ h1 {
   border-radius: 12px;
   width: 100%;
   padding: 25px 30px;
-  margin-bottom: 25px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
@@ -79,4 +76,30 @@ h2 {
   margin-top: 0.5rem;
   font-size:3rem;
   color: #555;
+}
+
+#logo-row {
+  width: 80%;
+  margin: 2rem auto 4rem auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.map-logo {
+  width: 8vw;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.map-logo:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
