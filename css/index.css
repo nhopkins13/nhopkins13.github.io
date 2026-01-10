@@ -1,0 +1,241 @@
+:root {
+  --name-color: rgb(223, 161, 62);
+  --education-color-on: rgb(56, 15, 43);
+  --experience-color-on: rgb(4, 36, 4);
+  --paintings-color-on: rgb(58,20,66);
+  --projects-color-on: rgb(3, 3, 87);
+
+  --education-color-off: rgb(247, 223, 238);
+  --experience-color-off: rgb(199, 236, 166);
+  --paintings-color-off: rgb(247, 221, 252);
+  --projects-color-off: rgb(194, 228, 239);
+}
+
+.wrapper{
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  width: 100%
+}
+
+.bg {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+  height: 90vh; 
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex; 
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bg-name::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  z-index: 0; 
+}
+
+.pixel-name {
+  display: flex;
+  flex-wrap: wrap;      
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;     
+  margin-bottom: 2rem;
+  z-index: 1; 
+  position: relative;
+}
+
+.pixel-name img {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 95%;
+}
+
+#bg-name {
+  height: 100vh;
+  padding-top: 27vh;
+  justify-content: flex-start;
+  background-image: url("../images/home-bgs/name.JPG");
+}
+#bg-education {
+  background-image: url("../images/home-bgs/education.JPG");
+}
+#bg-experience {
+  background-image: url("../images/home-bgs/experience.JPG");
+}
+#bg-paintings {
+  background-image: url("../images/home-bgs/painting.jpeg");
+}
+#bg-projects {
+  background-image: url("../images/home-bgs/projects.jpeg");
+}
+
+.title {
+  display: block;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+/* Anchors should not fill the whole .bg section — only title and description are clickable */
+.title a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.description-container p a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+
+#education-title{
+  color: var(--education-color-off);
+}
+#experience-title{
+  color: var(--experience-color-off);
+}
+#paintings-title{
+  color: var(--paintings-color-off);
+}
+#projects-title{
+  color: var(--projects-color-off);
+}
+
+#education-title:hover { color: var(--education-color-on); }
+#experience-title:hover { color: var(--experience-color-on); }
+#paintings-title:hover { color: var(--paintings-color-on); }
+#projects-title:hover { color: var(--projects-color-on); }
+
+.scroll{
+  height: 10px;
+}
+#scroll-name {
+  background-color: var(--name-color);
+}
+#scroll-education {
+  background-color: var(--education-color-on);
+}
+#scroll-experience {
+  background-color: var(--experience-color-on);
+}
+#scroll-paintings {
+  background-color: var(--paintings-color-on);
+}
+#scroll-projects {
+  background-color: var(--projects-color-on);
+}
+
+.typewriter-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-inline: clamp(1rem, 6vw, 6rem);
+  position: relative;
+  min-height: 10rem;
+  margin-top: 4rem;
+  z-index: 1;
+}
+
+.typewriter-container p {
+  display: block;
+  width: 100%;
+  max-width: min(80%, 70ch);
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  background: #fffdf6; 
+  border: 2px solid #000;
+  color: #000;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(3rem, 3.2vw, 2.2rem);
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+
+.description-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-inline: clamp(1rem, 6vw, 6rem);
+  position: relative;
+  min-height: 10rem;
+  margin-top: 4rem;
+  z-index: 1;
+}
+
+.description-container p{
+  display: block;
+  width: 100%;
+  max-width: min(80%, 70ch);
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  border: 2px solid #000;
+  color: #000;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(3rem, 3.2vw, 2.2rem);
+  text-align: center;
+}
+
+#education-description p{
+  background-color: var(--education-color-off);
+}
+#experience-description p{
+  background-color: var(--experience-color-off);
+}
+#paintings-description p{
+  background-color: var(--paintings-color-off);
+}
+#projects-description p{
+  background-color: var(--projects-color-off);
+}
+
+.typewriter-container .cursor {
+  display: inline-block;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>About Neely | Home</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/cat-tab-icon.png">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+
+    <div class="wrapper"> 
+     <div class="bg" id="bg-name">
+        <div class="center-content">
+          <div class="pixel-name">
+            <img id="neely" src="assets/neely.png" alt="Neely">
+            <img id="hopkins" src="assets/hopkins.png" alt="Hopkins">
+          </div>
+          <div class="typewriter-container">
+            <p id="typewriter-text"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll" id="scroll-name">
+      </div>
+      
+      <div class="bg" id="bg-education">
+        <h1 class="title" id="education-title"><a href="education.html">EDUCATION</a></h1>
+          <div class="description-container" id="education-description">
+            <p><a href="education.html">Review my academic background, activities, honors, and future goals.</a></p>
+          </div>
+      </div>
+      
+      <div class="scroll" id="scroll-education">
+      </div>
+      
+      <div class="bg" id="bg-experience">
+        <h1 class="title" id="experience-title"><a href="experience.html">EXPERIENCE</a></h1>
+          <div class="description-container" id="experience-description">
+            <p><a href="experience.html">View a detailed outline of my relevant work experience or download my resume.</a></p>
+          </div>
+      </div>
+      
+      <div class="scroll" id="scroll-experience">
+      </div>
+
+      <div class="bg" id="bg-paintings">
+        <h1 class="title" id="paintings-title"><a href="paintings.html">PAINTINGS</a></h1>
+          <div class="description-container" id="paintings-description">
+            <p><a href="paintings.html">Trace the evolution of my art from 2012 to the present.</a></p>
+          </div>
+      </div>
+
+      <div class="scroll" id="scroll-paintings">
+      </div> 
+
+      <div class="bg" id="bg-projects">
+        <h1 class="title" id="projects-title"><a href="projects.html">PROJECTS</a></h1>
+          <div class="description-container" id="projects-description">
+            <p><a href="projects.html">Check out some of the projects I coded while studying at Mines, the Github link to this website's raw code, or my coding philosophy.</a></p>
+          </div>
+      </div> 
+
+      <div class="scroll" id="scroll-projects">
+      </div> 
+    </div>
+
+    <div id="footer"></div>
+    <script src="js/navbar.js"></script>  
+    <script src="js/footer.js"></script>
+    <script src="js/typewriter.js" defer></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+      startTypewriter("Hello, World! Welcome to my website!\nExplore the sections below or use the navigation menu to learn more about me.");});
+</script>
+  </body>
+</html>
