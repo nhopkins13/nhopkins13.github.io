@@ -64,3 +64,41 @@ h1{
     margin: 28px 0;
   }
 }
+
+.resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  border-radius: 12px;
+  background: #fbfaf8;
+  box-shadow: 0 8px 22px rgba(16,24,40,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+  text-decoration: none;
+}
+.resume-link .resume-icon {
+  width: 100px;
+  height: 100px;
+}
+.resume-text {
+  color: #111827;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+}
+.resume-link:focus,
+.resume-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(16,24,40,0.09);
+}
+
+@media (max-width: 700px) {
+  .resume-link { width: 96px; height: 96px; }
+  .resume-link svg { width: 52px; height: 52px; }
+}

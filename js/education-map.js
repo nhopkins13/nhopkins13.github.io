@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-
+  
   var map = L.map('map', {
     minZoom: 4,
     maxZoom: 18,
@@ -53,8 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Instead of making `.edu-card` clickable, create a centered row
-  // of logos below the map and wire those to zoom to the matching marker.
   const logoRow = document.getElementById('logo-row');
   if (logoRow) {
     const eduLogos = Array.from(document.querySelectorAll('.edu-logo'));

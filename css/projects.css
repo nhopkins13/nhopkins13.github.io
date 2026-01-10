@@ -32,3 +32,33 @@ h1{
 img{
   height: 40vh;
 }
+
+.project-link-wrapper {
+  margin-top: 0.75rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  color: #111111;
+  text-decoration: underline;
+  transition: color 0.15s ease;
+}
+
+.project-link img {
+  height: 5vh;
+  width: auto;
+  display: block;
+}
+
+.project-link span {
+  display: inline-block;
+  line-height: 1;
+  color: inherit;
+}
+
+.project-link:hover {
+  color: blue;
+}
