@@ -1,6 +1,6 @@
 :root {
   --name-color: rgb(223, 161, 62);
-  --education-color-on: rgb(56, 15, 43);
+  --education-color-on: rgb(90, 5, 25);
   --experience-color-on: rgb(4, 36, 4);
   --paintings-color-on: rgb(58,20,66);
   --projects-color-on: rgb(3, 3, 87);
@@ -212,15 +212,19 @@ a:visited {
 
 #education-description p{
   background-color: var(--education-color-off);
+  color: var(--education-color-on);
 }
 #experience-description p{
   background-color: var(--experience-color-off);
+  color: var(--experience-color-on);
 }
 #paintings-description p{
   background-color: var(--paintings-color-off);
+  color: var(--paintings-color-on);
 }
 #projects-description p{
   background-color: var(--projects-color-off);
+  color: var(--projects-color-on);
 }
 
 .typewriter-container .cursor {

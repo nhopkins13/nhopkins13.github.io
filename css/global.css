@@ -58,7 +58,7 @@ span {
 
 .intro{
   font-family: "Georgia", serif;
-  font-size: 1rem;
+  font-size: clamp(0.7rem, 1vw, 1rem);
   font-style: italic;
   color: #333;
   border-left: 4px solid #4f46e5; 
@@ -106,7 +106,7 @@ img {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  width: 85%;
+  width: fit-content;
   max-width: 95%;
   margin: 0 auto;
   border: 1px solid rgba(255, 255, 255, 0.1);
