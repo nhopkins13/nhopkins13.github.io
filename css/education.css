@@ -7,7 +7,7 @@ h1 {
 
 #map {
     height: 50vh;
-    width: 70%;
+    width: 70vw;
     margin: 1rem auto;
     padding: 1rem;
     border-radius: 1rem;
@@ -34,9 +34,9 @@ h1 {
 }
 
 .edu-logo {
-  width: 70px; 
+  width: clamp(50px, 8vw, 80px);
   object-fit: contain;
-  margin-right: 1rem;
+  margin-right: 5px;
 }
 
 .edu-card {
@@ -58,17 +58,6 @@ h1 {
 
 h2 {
   color: #1a5276;
-}
-
-.edu-header span {
-  font-size: 1rem;
-  color: #555;
-  display: block;
-}
-
-.activities {
-  font-size:1rem;
-  color: #555;
 }
 
 #logo-row {
@@ -99,4 +88,18 @@ h2 {
 .map-logo:hover {
   transform: translateY(-6px) scale(1.05);
   box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+/* Target screens smaller than 600px */
+@media (max-width: 600px) {
+  #map {
+    width: 90vw;
+    height: 70vh; 
+    margin: 0.5rem auto; 
+    padding: 0.5rem;   
+  }
+
+  #logo-row {
+    width: 95%;
+  }
 }
