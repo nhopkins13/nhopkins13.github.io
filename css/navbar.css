@@ -39,7 +39,7 @@ ul.navbar li a {
 
 ul.navbar li a .icon {
   width: auto;
-  height: 100%;
+  height: 120%;
   object-fit: contain;
   display: block;
 }

@@ -12,7 +12,7 @@
 }
 
 #home-wrapper{
-  padding-top: 8vh;
+  padding-top: --var(--navbar-height);
   padding-right: 0;
   padding-left: 0;
   padding-bottom: 0;
