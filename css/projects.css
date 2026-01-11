@@ -38,7 +38,10 @@ h1{
 }
 
 img{
-  height: 40vh;
+  display: block;
+  max-height: 40vh;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .project-link {

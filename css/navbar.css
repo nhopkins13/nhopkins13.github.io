@@ -1,6 +1,6 @@
 :root {
   --on-select-color: rgb(170,247,89);
-  --navbar-height: 8vh; /* use viewport height for consistent offset */
+  --navbar-height: 8vh;
 }
 * {
   margin: 0;
@@ -39,7 +39,7 @@ ul.navbar li a {
 
 ul.navbar li a .icon {
   width: auto;
-  height: clamp(2rem, 9vw, 4.2rem);
+  height: clamp(3.5rem, 9vw, 4.2rem);
   object-fit: contain;
   display: block;
 }
