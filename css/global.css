@@ -91,3 +91,30 @@ img {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
 }
+
+.glass-barrier {
+  /* Very faint dark tint for "almost clear" */
+  background: rgba(0, 0, 0, 0.08);
+
+  /* Low blur radius for "very subtle" effect */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); /* For Safari */
+
+  /* Much tighter padding to reduce space taken */
+  padding: 0.5rem;
+  border-radius: 1rem;
+
+  /* Tighter gap between title and description */
+  gap: 0.25rem;
+
+  /* Essential layout properties to center content */
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  max-width: 95%;
+  margin: 0 auto;
+  /* Very subtle border to define edges */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
