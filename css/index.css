@@ -5,10 +5,10 @@
   --paintings-color-on: rgb(58,20,66);
   --projects-color-on: rgb(3, 3, 87);
 
-  --education-color-off: rgb(247, 223, 238);
-  --experience-color-off: rgb(199, 236, 166);
-  --paintings-color-off: rgb(247, 221, 252);
-  --projects-color-off: rgb(194, 228, 239);
+  --education-color-off: rgb(237, 209, 212);
+  --experience-color-off: rgb(218, 255, 186);
+  --paintings-color-off: rgb(249, 220, 255);
+  --projects-color-off: rgb(102, 180, 206);
 }
 
 #home-wrapper{
@@ -85,7 +85,7 @@
 .title {
   display: block;
   font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(3.5rem, 8vw, 13rem);
+  font-size: clamp(3.2rem, 8vw, 13rem);
   font-weight: bolder;
   text-align: center;
   max-width: 100%;

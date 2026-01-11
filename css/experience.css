@@ -1,14 +1,15 @@
 h1{
-  font-family: Verdana, Geneva, Tahoma, sans-serif
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-bottom: 0.5rem;
 }
 
 .job {
   background-color: #fbfaf8; 
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 0.5rem;
   box-shadow: 0 6px 18px rgba(16,24,40,0.06);
   border: 1px solid rgba(0,0,0,0.04);
-  margin: 1rem;
+  margin-bottom: 10px;
 }
 
 .job-top {
@@ -45,7 +46,7 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .resume-link {
   display: inline-flex;
