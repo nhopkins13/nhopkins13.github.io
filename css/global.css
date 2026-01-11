@@ -1,13 +1,13 @@
 /*tiny details*/
 .indent{
-  text-indent: 2rem;
+  text-indent: 0.5rem;
 }
 /*aesthetic stuff*/
 .wrapper {
-  margin: 9vh 2rem 2rem 2rem;
-  padding: 2rem;
-  max-width: 100%;
-  box-sizing: border-box;
+  padding-top: 9vh;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
 }
 
 html{
@@ -18,7 +18,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
   background-color: #f8f9fc;
   color: #333;
-  font-size: 3rem;
+  font-size: 1rem;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -27,33 +27,27 @@ body {
 }
 
 h1{
-  font-size: 8rem;
-  padding: 1rem;
+  font-size: 3rem;
 }
 
 h2{
-  font-size: 5rem;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
   color: #1f2937;
 }
 
 h3{
-  font-size: 4rem;
-  margin-bottom: 1rem;
+  font-size: 1.25rem;
   color: #374151;
 }
 
 p {
-  margin: 0.5rem 0;
-  line-height: 1.6;
-  font-size: 3rem;
-  padding: 0.5rem;
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
 .italics{
-  font-size: 3rem;
-  margin: 0.5rem 0;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.5;
   font-style: italic;
 }
 
@@ -64,17 +58,17 @@ span {
 
 .intro{
   font-family: "Georgia", serif;
-  font-size: 3rem;
+  font-size: 1rem;
   font-style: italic;
   color: #333;
-  border-left: 12px solid #4f46e5; 
-  padding: 3rem;
+  border-left: 4px solid #4f46e5; 
+  padding: 0.5rem;
   background-color: #f9fafb;
   width: auto;
 }
 
 .date {
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 img {

@@ -1,28 +1,27 @@
-
-
 h1 {
-  border-bottom: 2px solid #1a5276;
+  border-bottom: 1px solid #1a5276;
   font-family: 'Times New Roman', Times, serif;
   color: #2c3e50;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #map {
-    height: 40vh;
-    width: 60%;
-    margin: 4rem auto;
+    height: 50vh;
+    width: 70%;
+    margin: 1rem auto;
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
     justify-content: center;
+    z-index: 0;
 }
 
 .big-tooltip {
   background-color: #fff !important;
-  border: 2px solid #1a5276 !important;
-  border-radius: 12px !important;
-  padding: 10px 15px !important;
-  font-size: 1.6rem !important;
+  border: 1px solid #1a5276 !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  font-size: 0.5rem !important;
   font-weight: bold !important;
   color: #1a5276;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -31,22 +30,22 @@ h1 {
 .edu-container {
   display: flex;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 .edu-logo {
-  width: 10vw; 
-  height: 8vh; 
+  width: 70px; 
   object-fit: contain;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .edu-card {
   background: #fff;
   border-radius: 12px;
   width: 100%;
-  padding: 25px 30px;
+  padding: 0.8rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-bottom: 10px;
 }
 
 .edu-header {
@@ -57,33 +56,33 @@ h1 {
   margin-bottom: 1rem;
 }
 
-
 h2 {
-  margin: 0;
   color: #1a5276;
 }
 
 .edu-header span {
-  font-size: 3rem;
+  font-size: 1rem;
   color: #555;
   display: block;
-  margin-top: 5px;
 }
 
 .activities {
-  margin-top: 0.5rem;
-  font-size:3rem;
+  font-size:1rem;
   color: #555;
 }
 
 #logo-row {
   width: 80%;
-  margin: 2rem auto 4rem auto;
+  margin: 1rem auto 4rem auto;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   flex-wrap: wrap;
+}
+
+#logo-row img{
+  width: clamp(20px, 10vw, 50px);
 }
 
 .map-logo {

@@ -1,5 +1,8 @@
 footer {
   background-image: url("../assets/postcard.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: clamp(400px, 50%, 500px);
   color: black;
   font-family: 'Georgia', serif;
   width: 100%;
@@ -11,50 +14,58 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 60px;
-  padding: 10vh 10%;
   border-bottom: 2px solid rgba(139, 0, 0, 0.2);
+  min-height: 40vh;
+  gap: 100px;
+  padding: 4rem;
 }
 
-.about {
-  min-width: 450px;
-  max-width: 600px;
-  background-color: white;
-  padding: 1rem;
-  line-height: 1.5;
-}
-
-.profile-pic img {
-  width: 25vh;
-  height: 25vh;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 10px solid white;
-}
-
-.contact {
-  min-width: 350px;
+.column {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
+}
+
+.about {
+  background-color: white;
+  padding: 0.5rem;
+  max-width: 250px;
+  border-radius: 15px;
+}
+
+.profile-pic img {
+  display: block;
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .contact-info {
   background-color: white;
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   align-items: center;
+  line-height: 1.5;
+  border-radius: 15px;
 }
 
 .contact-item {
   display: flex;
   gap: 0.5rem;
-  font-size: 2.5rem;
+  font-size: 1rem;
   text-align: center;
-  white-space: nowrap;
+  white-space: nowrap; /* Prevents text from wrapping to a second line */
 }
 
 footer a:hover {
@@ -64,23 +75,23 @@ footer a:hover {
 
 .bottom {
   text-align: center;
-  font-size: 2rem;
+  font-size: 0.5rem;
   background-color: white;
-  padding: 1rem;
-  margin: 1rem;
+  padding: 10px 0;
 }
 
+/* Updated Media Query */
 @media (max-width: 900px) {
-  .about {
-    min-width: 100%;
-    max-width: 100%;
+  .container {
+    gap: 40px;
   }
 
-  .contact {
-    min-width: 100%;
+  .about, .contact {
+    max-width: 100%;
+    min-width: unset;
   }
 
   .contact-item {
-    white-space: normal;
+    white-space: nowrap; 
   }
 }

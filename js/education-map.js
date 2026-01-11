@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   
   var map = L.map('map', {
-    minZoom: 4,
+    minZoom: 2,
     maxZoom: 18,
     worldCopyJump: false
   });
@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const defaultIcon = L.icon({
         iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-        iconSize: [45, 71],
+        iconSize: [15, 21],
         iconAnchor: [12, 41],
         popupAnchor: [1, -34],
         shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-        shadowSize: [41, 41]
+        shadowSize: [31, 21]
     });
 
   const markers = universities.map(u => {

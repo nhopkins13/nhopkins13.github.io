@@ -3,10 +3,9 @@ h1{
 }
 
 .project {
-  margin: 4rem auto;
+  margin: 0.5rem;
   max-width: 100%;
-  padding: 2rem;
-  padding-bottom: 2rem;
+  padding: 1rem;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
@@ -14,10 +13,19 @@ h1{
   overflow: hidden;
 }
 
+.italics{
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+.date{
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+
 .overflow-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;    
+  gap: 2px;    
   overflow: visible; 
   align-items: flex-start;
   justify-content: center;
@@ -33,14 +41,10 @@ img{
   height: 40vh;
 }
 
-.project-link-wrapper {
-  margin-top: 0.75rem;
-}
-
 .project-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 2px;
   white-space: nowrap;
   color: #111111;
   text-decoration: underline;
@@ -48,7 +52,7 @@ img{
 }
 
 .project-link img {
-  height: 5vh;
+  height: 50px;
   width: auto;
   display: block;
 }

@@ -1,7 +1,7 @@
 :root {
   --on-select-color: rgb(170,247,89);
+  --navbar-height: 8vh; /* use viewport height for consistent offset */
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ ul.navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 8vh;
+  height: var(--navbar-height);
   z-index: 1000;
   list-style: none;
 }
@@ -30,7 +30,7 @@ ul.navbar li a {
   justify-content: center;
   align-items: center;
   height: 100%;
-  font-size: 5rem;
+  font-size: clamp(1rem, 2.5vw, 2rem);
   font-family: 'Courier New', Courier, monospace;
   font-style: oblique;
   text-decoration: none;
@@ -39,7 +39,7 @@ ul.navbar li a {
 
 ul.navbar li a .icon {
   width: auto;
-  height: 7vh;
+  height: 100%;
   object-fit: contain;
   display: block;
 }

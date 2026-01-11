@@ -6,50 +6,46 @@ body {
 }
 
 .title-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .page-title{
-    height: 30vh;
+  height: 30vh;
 }
 
 .year-section {
-  margin: 2rem auto;
+  margin: 1rem auto;
   max-width: 100%;
-  padding: 0 2rem;
+  padding: 1rem;
 }
 
 .date {
   border-bottom: 2px solid #ddd;
-  margin-bottom: 1rem;
-  padding-bottom: 0.25rem;
+  margin-bottom: 10px;
 }
 
 .painting-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2px;
   align-items: center;
 }
 
 .painting-grid a {
   display: block;
-  background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
   overflow: hidden;
 }
 
 .painting-grid a:hover {
   transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .painting-grid img {
-  height: 25vh;
+  height: 30vh;
   width: auto;
   object-fit: contain;
   display: block;
@@ -95,14 +91,13 @@ body {
 
 #lightbox-close {
   position: fixed;
-  top: 2rem;
-  right: 3rem;
-  font-size: 5rem; /* bigger X */
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem; /* bigger X */
   color: #fff;
   cursor: pointer;
   transition: color 0.2s;
   z-index: 1001;
-  padding: 0.25rem 0.5rem; /* increases hit area */
   line-height: 1;
 }
 #lightbox-close:hover { color: #ff6961; }
@@ -111,25 +106,41 @@ body {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 5.5rem; /* larger arrows */
-  color: #fff;
+  width: 60px; 
+  height: 60px;
   cursor: pointer;
   z-index: 1001;
-  user-select: none;
-  transition: color 0.2s;
-  padding: 0 1.5rem; /* larger hit area */
-  touch-action: manipulation;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
 }
+
+.lightbox-arrow::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  display: block;
+}
+
+#lightbox-prev { left: 1rem; }
+#lightbox-prev::after {
+  transform: rotate(-135deg); /* Points Left */
+  margin-left: 8px; /* Visual center adjustment */
+}
+
+#lightbox-next { right: 1rem; }
+#lightbox-next::after {
+  transform: rotate(45deg); /* Points Right */
+  margin-right: 8px; /* Visual center adjustment */
+}
+
+.lightbox-arrow:hover::after {
+  border-color: #ff6961;
+}
+
 #lightbox-prev { left: 1rem; }
 #lightbox-next { right: 1rem; }
 .lightbox-arrow:hover { color: #ff6961; }
-
-@media (max-width: 768px) {
-  #lightbox-image {
-    max-width: 95vw;
-    max-height: 80vh;
-  }
-  /* keep controls large on mobile but slightly reduced */
-  #lightbox-close { font-size: 3.5rem; right: 1.5rem; }
-  .lightbox-arrow { font-size: 4rem; padding: 0 1rem; }
-}
