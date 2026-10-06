@@ -1,70 +1,41 @@
-h1{
-  font-family: 'Courier New', Courier, monospace;
-  padding-bottom: 0.5rem;
+h1 {
+  font-family: "Courier New", Courier, monospace;
 }
 
 .project {
   max-width: 100%;
-  padding: 0.5rem;
+  padding: var(--space-sm) var(--space-md);
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
-  box-sizing: border-box;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   overflow: hidden;
-  margin-bottom: 10px;
 }
 
-.italics{
-  margin-bottom: 4px;
-  margin-top: 4px;
-}
-.date{
-  margin-bottom: 4px;
-  margin-top: 4px;
+.project .italics,
+.project .date {
+  margin: 0.25rem 0;
 }
 
-.overflow-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2px;    
-  overflow: visible; 
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-}
-
-.overflow-row > * {
-  flex: 0 1 auto;
-}
-
-img{
+.project img {
   display: block;
-  max-height: 40vh;
-  max-width: 100%;
+  max-height: clamp(10rem, 32dvh, 18rem);
+  width: auto;
   object-fit: contain;
 }
 
 .project-link {
   display: inline-flex;
   align-items: center;
-  gap: 2px;
-  white-space: nowrap;
+  gap: 0.35rem;
   color: #111111;
   text-decoration: underline;
   transition: color 0.15s ease;
 }
 
 .project-link img {
-  height: 50px;
+  height: 2.5rem;
+  max-height: 2.5rem;
   width: auto;
-  display: block;
-}
-
-.project-link span {
-  display: inline-block;
-  line-height: 1;
-  color: inherit;
 }
 
 .project-link:hover {

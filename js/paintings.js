@@ -82,23 +82,6 @@ function openLightbox(index) {
     currentIndex = index;
     modalImg.src = link.href;
     modal.classList.add('show');
-
-    modalImg.onload = () => {
-        const vw = window.innerWidth;
-  const vh = window.innerHeight;
-
-  modalImg.style.width = '';
-  modalImg.style.height = '';
-
-  const imgW = modalImg.naturalWidth;
-  const imgH = modalImg.naturalHeight;
-
-  if (imgW < vw * 0.5 && imgH < vh * 0.5) {
-    const scaleFactor = Math.min((vw * 0.8) / imgW, (vh * 0.8) / imgH);
-    modalImg.style.width = `${imgW * scaleFactor}px`;
-    modalImg.style.height = 'auto';
-  }
-    };
 }
 
   function closeLightbox() {

@@ -2,96 +2,84 @@
   --name-color: rgb(223, 161, 62);
   --education-color-on: rgb(90, 5, 25);
   --experience-color-on: rgb(4, 36, 4);
-  --paintings-color-on: rgb(58,20,66);
+  --paintings-color-on: rgb(58, 20, 66);
   --projects-color-on: rgb(3, 3, 87);
-
   --education-color-off: rgb(237, 209, 212);
   --experience-color-off: rgb(218, 255, 186);
   --paintings-color-off: rgb(249, 220, 255);
   --projects-color-off: rgb(102, 180, 206);
 }
 
-#home-wrapper{
-  padding-top: var(--navbar-height);
-  padding-right: 0;
-  padding-left: 0;
-  padding-bottom: 0;
+#home-wrapper {
+  width: 100%;
+  max-width: none;
+  padding: var(--navbar-height) 0 0;
+  gap: 0;
 }
 
 .bg {
+  container-type: inline-size;
   position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center ;
-  min-height: 92vh;
-  width: 100%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  display: flex; 
+  gap: var(--space-md);
+  min-height: calc(100dvh - var(--navbar-height));
+  width: 100%;
+  padding: var(--space-lg) var(--page-pad-x);
   overflow: hidden;
-  flex-direction: column;
-  gap: 20px;
-}
-
-#bg-name::before {
-  content: "";
-  position: absolute;
-  inset: 0; 
-  background-image: inherit;
+  text-align: center;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  opacity: 0.9;
-  z-index: 0; 
 }
 
 .pixel-name {
   display: flex;
-  flex-wrap: wrap;      
-  justify-content: center; 
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;    
-  z-index: 1; 
+  gap: 0.6rem;
+  z-index: 1;
   position: relative;
-  gap: 10px;
 }
 
 .pixel-name img {
-  height: clamp(6rem, 10vw, 14rem);
+  height: clamp(4.5rem, 18cqi, 12rem);
+  width: auto;
   max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #bg-name {
-  justify-content: flex-start;
   background-image: url("../images/home-bgs/name.JPG");
-  justify-content: center; 
 }
+
 #bg-education {
   background-image: url("../images/home-bgs/education.JPG");
 }
+
 #bg-experience {
   background-image: url("../images/home-bgs/experience.JPG");
 }
+
 #bg-paintings {
   background-image: url("../images/home-bgs/painting.jpeg");
 }
+
 #bg-projects {
   background-image: url("../images/home-bgs/projects.jpeg");
 }
 
 .title {
-  display: block;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(3.2rem, 8vw, 13rem);
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(1.8rem, 11cqi, 9rem);
   font-weight: bolder;
+  line-height: 0.95;
   text-align: center;
-  max-width: 100%;
   white-space: nowrap;
-  overflow-wrap: normal;
-  word-break: normal;
 }
 
 .title a {
@@ -106,83 +94,37 @@
   color: inherit;
   text-decoration: none;
 }
- 
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 a:visited {
   color: inherit;
 }
 
-#education-title{
-  color: var(--education-color-off);
-}
-#experience-title{
-  color: var(--experience-color-off);
-}
-#paintings-title{
-  color: var(--paintings-color-off);
-}
-#projects-title{
-  color: var(--projects-color-off);
-}
+#education-title { color: var(--education-color-off); }
+#experience-title { color: var(--experience-color-off); }
+#paintings-title { color: var(--paintings-color-off); }
+#projects-title { color: var(--projects-color-off); }
 
 #education-title:hover { color: var(--education-color-on); }
 #experience-title:hover { color: var(--experience-color-on); }
 #paintings-title:hover { color: var(--paintings-color-on); }
 #projects-title:hover { color: var(--projects-color-on); }
 
-.scroll{
+.scroll {
   height: 5px;
 }
-#scroll-name {
-  background-color: var(--name-color);
-}
-#scroll-education {
-  background-color: var(--education-color-on);
-}
-#scroll-experience {
-  background-color: var(--experience-color-on);
-}
-#scroll-paintings {
-  background-color: var(--paintings-color-on);
-}
-#scroll-projects {
-  background-color: var(--projects-color-on);
-}
 
-.typewriter-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
+#scroll-name { background-color: var(--name-color); }
+#scroll-education { background-color: var(--education-color-on); }
+#scroll-experience { background-color: var(--experience-color-on); }
+#scroll-paintings { background-color: var(--paintings-color-on); }
+#scroll-projects { background-color: var(--projects-color-on); }
 
-.typewriter-container p {
-  display: block;
-  width: 100%;
-  max-width: min(80%, 70ch);
-  box-sizing: border-box;
-  padding: 0.75rem;
-  border-radius: 0.75rem;
-  background: #fffdf6; 
-  border: 1px solid #000;
-  color: #000;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(0.5rem, 3vw, 1rem);
-  line-height: 1.5;
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-  -webkit-font-smoothing: antialiased;
-  text-align: center;
-}
-
+.typewriter-container,
 .description-container {
   width: 100%;
   display: flex;
@@ -190,39 +132,48 @@ a:visited {
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
-  padding-inline: clamp(1rem, 6vw, 6rem);
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
-.description-container p{
+.typewriter-container p,
+.description-container p {
   display: block;
-  width: 100%;
-  max-width: min(80%, 70ch);
+  width: min(70ch, 100%);
   margin: 0 auto;
-  box-sizing: border-box;
   padding: 0.75rem;
   border-radius: 0.75rem;
   border: 1px solid #000;
   color: #000;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(0.6rem, 1vw, 1rem);
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(0.9rem, 0.8rem + 0.6vw, 1.05rem);
+  line-height: 1.5;
+  overflow-wrap: break-word;
   text-align: center;
 }
 
-#education-description p{
+.typewriter-container p {
+  white-space: pre-wrap;
+  background: #fffdf6;
+}
+
+#education-description p {
   background-color: var(--education-color-off);
   color: var(--education-color-on);
 }
-#experience-description p{
+
+#experience-description p {
   background-color: var(--experience-color-off);
   color: var(--experience-color-on);
 }
-#paintings-description p{
+
+#paintings-description p {
   background-color: var(--paintings-color-off);
   color: var(--paintings-color-on);
 }
-#projects-description p{
+
+#projects-description p {
   background-color: var(--projects-color-off);
   color: var(--projects-color-on);
 }
@@ -231,4 +182,10 @@ a:visited {
   display: inline-block;
   vertical-align: middle;
   line-height: 1;
+}
+
+@container (max-width: 420px) {
+  .title {
+    font-size: clamp(1.6rem, 13cqi, 2.4rem);
+  }
 }

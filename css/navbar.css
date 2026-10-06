@@ -1,27 +1,24 @@
 :root {
-  --on-select-color: rgb(170,247,89);
-  --navbar-height: 8vh;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --on-select-color: rgb(170, 247, 89);
 }
 
 ul.navbar {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(167, 211, 212);
+  list-style: none;
+  margin: 0;
+  padding: 0;
   position: fixed;
   top: 0;
   width: 100%;
   height: var(--navbar-height);
+  background-color: rgb(167, 211, 212);
   z-index: 1000;
-  list-style: none;
 }
 
 ul.navbar li {
   flex: 1;
+  min-width: 0;
   height: 100%;
 }
 
@@ -30,8 +27,9 @@ ul.navbar li a {
   justify-content: center;
   align-items: center;
   height: 100%;
-  font-size: clamp(0.8rem, 2.5vw, 1.6rem);
-  font-family: 'Courier New', Courier, monospace;
+  padding-inline: 0.25rem;
+  font-size: clamp(0.7rem, 2vw, 1.25rem);
+  font-family: "Courier New", Courier, monospace;
   font-style: oblique;
   text-decoration: none;
   color: inherit;
@@ -39,24 +37,27 @@ ul.navbar li a {
 
 ul.navbar li a .icon {
   width: auto;
-  height: clamp(3.5rem, 9vw, 4.2rem);
+  height: clamp(2rem, 6vw, 2.75rem);
   object-fit: contain;
   display: block;
 }
 
 ul.navbar li a .label {
   display: none;
+  white-space: nowrap;
 }
 
-ul.navbar li a:hover .label {
-  display: inline;
-}
+@media (hover: hover) and (pointer: fine) {
+  ul.navbar li a:hover .label {
+    display: inline;
+  }
 
-ul.navbar li a:hover .icon {
-  display: none;
-}
+  ul.navbar li a:hover .icon {
+    display: none;
+  }
 
-ul.navbar li a:hover {
-  background-color: var(--on-select-color);
-  color: black;
+  ul.navbar li a:hover {
+    background-color: var(--on-select-color);
+    color: black;
+  }
 }

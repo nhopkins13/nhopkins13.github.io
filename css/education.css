@@ -1,19 +1,15 @@
 h1 {
   border-bottom: 1px solid #1a5276;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   color: #2c3e50;
-  margin-bottom: 1rem;
 }
 
 #map {
-    height: 50vh;
-    width: 70vw;
-    margin: 1rem auto;
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
-    justify-content: center;
-    z-index: 0;
+  height: clamp(16rem, 50dvh, 28rem);
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
+  z-index: 0;
 }
 
 .big-tooltip {
@@ -21,39 +17,44 @@ h1 {
   border: 1px solid #1a5276 !important;
   border-radius: 8px !important;
   padding: 10px !important;
-  font-size: 0.5rem !important;
+  font-size: 0.8rem !important;
   font-weight: bold !important;
   color: #1a5276;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .edu-container {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
+  gap: var(--space-sm);
 }
 
 .edu-logo {
-  width: clamp(50px, 8vw, 80px);
+  width: clamp(3rem, 8vw, 5rem);
+  flex-shrink: 0;
   object-fit: contain;
-  margin-right: 5px;
 }
 
 .edu-card {
   background: #fff;
-  border-radius: 12px;
+  border-radius: var(--radius);
   width: 100%;
+  min-width: 0;
   padding: 0.8rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  margin-bottom: 10px;
+  box-shadow: var(--shadow);
 }
 
 .edu-header {
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
   margin-bottom: 0.25rem;
+}
+
+.edu-header .date {
+  color: #555;
 }
 
 h2 {
@@ -61,54 +62,40 @@ h2 {
 }
 
 #logo-row {
-  width: 80%;
-  margin: 1rem auto 1rem auto;
+  width: 100%;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: var(--space-sm);
   align-items: center;
   flex-wrap: wrap;
 }
 
-#logo-row img{
-  width: clamp(20px, 10vw, 50px);
+#logo-row img {
+  width: clamp(2rem, 8vw, 3.25rem);
 }
 
 .map-logo {
-  width: 8vw;
-  max-width: 120px;
+  width: clamp(3.5rem, 8vw, 6.5rem);
   height: auto;
   object-fit: contain;
   cursor: pointer;
   border-radius: 8px;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .map-logo:hover {
   transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* Target screens smaller than 600px */
-@media (max-width: 600px) {
-  #map {
-    width: 90vw;
-    height: 70vh; 
-    margin: 0.5rem auto; 
-    padding: 0.5rem;   
-  }
-  #logo-row {
-    width: 95%;
-  }
-  .edu-header {
+@media (max-width: 700px) {
+  .edu-container {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
+    align-items: stretch;
   }
-  
-  .edu-header span {
-    font-size: 0.9rem;
-    color: #555;
+
+  .edu-logo {
+    align-self: flex-start;
   }
 }
